@@ -122,10 +122,9 @@ const participantsSort = function(){
         return rev ;
 }
 
-console.log(participantsSort());
-
 
 export default {
   chatEvents,
   participants,
+  participantsSort,
 }

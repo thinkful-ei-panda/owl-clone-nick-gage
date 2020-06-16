@@ -13,13 +13,17 @@ class Participant extends Component {
   render(props) {
     const { store } = this.props;
 
+
     return (
       <div className='session-participant'>
         <img src={store.avatar} alt={store.name} className="user-avatar" />
         <div className="participant-info">
           <h6 className="participant-name">{store.name}</h6>
-          <div className="participant-status participant-status__green">
-            "on stage"
+            <div className="participant-status participant-status__green">
+            <!--if this is true return " on stage" else "in session " 
+            if offline return "left session"-->
+            {stagestat}
+
           </div>
         </div>
       </div>
