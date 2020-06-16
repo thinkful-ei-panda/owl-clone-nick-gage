@@ -7,7 +7,6 @@ function App(props) {
       <div className="participants-list">
         <ParticipantList participants={props.participants} />
       </div>
-
     </main>
   );
 }
