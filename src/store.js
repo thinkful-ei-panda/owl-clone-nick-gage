@@ -96,8 +96,33 @@ const chatEvents = [
 ];
 
 function getInSession(arr) {
-  return arr.filter()
+  return arr.filter(x => x.inSession)
 }
+
+function notInSession(arr){
+    return arr.filter(x => !x.inSession)
+}
+
+function isOnStage(arr){
+    return arr.filter(x => x.onStage)
+}
+
+
+
+const participantsSort = function(){
+    let rev = [];
+        rev.push(...isOnStage(participants))
+        const thing = getInSession(participants)
+        for(let i of thing  ){
+            if(!rev.includes(i)){
+                rev.push(i);
+            }
+        }
+        rev.push(...notInSession(participants))
+        return rev ;
+}
+
+console.log(participantsSort());
 
 
 export default {
