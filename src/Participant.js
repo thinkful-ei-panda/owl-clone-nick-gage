@@ -1,22 +1,30 @@
-import store from './store'
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
+class Participant extends Component {
 
-class participant extends Component{
-    
-    render(props) {
-        const { store } = this.props
+  static defaultProps = {
+    id: 0,
+    name: 'defaultName',
+    avatar: 'some.image',
+    inSession: true,
+    onStage: false
+  };
+
+  render(props) {
+    const { store } = this.props;
+
     return (
-        <div className= 'session-participant'>
-            <img src={store.avatar} alt={store.name} className="user-avatar"/>
-            <div className="participant-info">
-
-            </div>
+      <div className='session-participant'>
+        <img src={store.avatar} alt={store.name} className="user-avatar" />
+        <div className="participant-info">
+          <h6 className="participant-name">{store.name}</h6>
+          <div className="participant-status participant-status__green">
+            "on stage"
+          </div>
         </div>
+      </div>
     )
-        
-        
-    }
-
+  }
 }
+
+export default Participant;
