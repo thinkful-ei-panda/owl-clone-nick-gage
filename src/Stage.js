@@ -9,19 +9,21 @@ class Stage extends Component {
         inSession : false,
         onStage : false,
     }
-
+            
 
         render() {
 
-            return 
-    <div>
+            return (
+                <div>
         <div className='big-img'>
-
+            
         </div>
         <div className = small-img>
 
         </div>
     </div>
+            )
+    
         
         
 

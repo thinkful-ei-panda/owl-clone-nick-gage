@@ -13,8 +13,7 @@ class ChatLog extends Component {
 
         return (
             <div className='messages'>
-                <ChatLog />
-
+                
             </div>
         )
 
