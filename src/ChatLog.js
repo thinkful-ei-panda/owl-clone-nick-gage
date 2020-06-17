@@ -1,6 +1,11 @@
 import React from 'react';
 
 
-const function name(params) {
+const function Log(params) {
     
+}
+
+
+export default {
+    Log,
 }
